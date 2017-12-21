@@ -1,0 +1,59 @@
+2017-05-21T15:02:22.734+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-05-21T15:02:22.735+0800 I CONTROL  [initandlisten] MongoDB starting : pid=8280 port=27017 dbpath=C:\Users\子卿不语\share\share\mongoDB\data\database 64-bit host=QiScript
+2017-05-21T15:02:22.735+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-05-21T15:02:22.735+0800 I CONTROL  [initandlisten] db version v3.4.3
+2017-05-21T15:02:22.736+0800 I CONTROL  [initandlisten] git version: f07437fb5a6cca07c10bafa78365456eb1d6d5e1
+2017-05-21T15:02:22.736+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-05-21T15:02:22.736+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten] modules: none
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten] build environment:
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-05-21T15:02:22.738+0800 I CONTROL  [initandlisten] options: { service: true, storage: { dbPath: "C:\Users\子卿不语\share\share\mongoDB\data\database", directoryPerDB: true }, systemLog: { destination: "file", path: "C:\Users\子卿不语\share\share\mongoDB\data\datalog\db.log" } }
+2017-05-21T15:02:22.740+0800 I -        [initandlisten] Detected data files in C:\Users\子卿不语\share\share\mongoDB\data\database created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-05-21T15:02:22.740+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1458M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-05-21T15:02:24.104+0800 I CONTROL  [initandlisten] 
+2017-05-21T15:02:24.104+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-05-21T15:02:24.104+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-05-21T15:02:24.104+0800 I CONTROL  [initandlisten] 
+2017-05-21T15:02:24.446+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/子卿不语/share/share/mongoDB/data/database/diagnostic.data'
+2017-05-21T15:02:24.447+0800 I STORAGE  [initandlisten] Service running
+2017-05-21T15:02:24.447+0800 I NETWORK  [thread1] waiting for connections on port 27017
+2017-05-21T15:02:25.029+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2017-05-21T15:02:31.751+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49785 #1 (1 connection now open)
+2017-05-21T15:02:31.752+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:49785 conn1: { driver: { name: "mongo-java-driver", version: "3T_5.0.0-74-g1de6631-dirty" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Oracle Corporation/1.8.0_121-b13" }
+2017-05-21T15:03:38.522+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49815 #2 (2 connections now open)
+2017-05-21T15:03:38.527+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49816 #3 (3 connections now open)
+2017-05-21T15:03:38.528+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49817 #4 (4 connections now open)
+2017-05-21T15:03:38.529+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49818 #5 (5 connections now open)
+2017-05-21T15:03:38.530+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49819 #6 (6 connections now open)
+2017-05-21T15:03:57.994+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49829 #7 (7 connections now open)
+2017-05-21T15:03:57.994+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:49829 conn7: { driver: { name: "mongo-java-driver", version: "3T_5.0.0-74-g1de6631-dirty" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Oracle Corporation/1.8.0_121-b13" }
+2017-05-21T15:05:05.394+0800 I -        [conn1] end connection 127.0.0.1:49785 (7 connections now open)
+2017-05-21T15:05:05.394+0800 I -        [conn7] end connection 127.0.0.1:49829 (7 connections now open)
+2017-05-21T15:05:28.950+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49912 #8 (6 connections now open)
+2017-05-21T15:05:28.988+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:49912 conn8: { driver: { name: "mongo-java-driver", version: "3T_5.0.0-74-g1de6631-dirty" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Oracle Corporation/1.8.0_121-b13" }
+2017-05-21T15:05:29.020+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49913 #9 (7 connections now open)
+2017-05-21T15:05:29.020+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:49913 conn9: { driver: { name: "mongo-java-driver", version: "3T_5.0.0-74-g1de6631-dirty" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Oracle Corporation/1.8.0_121-b13" }
+2017-05-21T15:05:29.233+0800 I COMMAND  [conn9] command admin.$cmd command: listDatabases { listDatabases: 1 } numYields:0 reslen:231 locks:{ Global: { acquireCount: { r: 8 } }, Database: { acquireCount: { r: 3 } } } protocol:op_query 100ms
+2017-05-21T15:05:37.470+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:49923 #10 (8 connections now open)
+2017-05-21T15:05:37.471+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:49923 conn10: { driver: { name: "mongo-java-driver", version: "3T_5.0.0-74-g1de6631-dirty" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Oracle Corporation/1.8.0_121-b13" }
+2017-05-21T15:06:03.766+0800 I WRITE    [conn6] update chatroom.users query: { name: "sq" } planSummary: COLLSCAN update: { $set: { status: true } } keysExamined:0 docsExamined:1 nMatched:1 nModified:1 numYields:1 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } 101ms
+2017-05-21T15:06:03.766+0800 I COMMAND  [conn6] command chatroom.$cmd command: update { update: "users", writeConcern: { w: 1 }, ordered: true, updates: [ { q: { name: "sq" }, u: { $set: { status: true } }, multi: false, upsert: false } ] } numYields:0 reslen:59 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 125ms
+2017-05-21T16:00:06.764+0800 I -        [conn6] end connection 127.0.0.1:49819 (8 connections now open)
+2017-05-21T16:00:06.788+0800 I -        [conn5] end connection 127.0.0.1:49818 (7 connections now open)
+2017-05-21T16:00:06.851+0800 I -        [conn4] end connection 127.0.0.1:49817 (6 connections now open)
+2017-05-21T16:00:07.000+0800 I -        [conn2] end connection 127.0.0.1:49815 (5 connections now open)
+2017-05-21T16:00:07.004+0800 I -        [conn3] end connection 127.0.0.1:49816 (4 connections now open)
+2017-05-21T16:00:09.422+0800 I -        [conn8] end connection 127.0.0.1:49912 (3 connections now open)
+2017-05-21T16:00:09.837+0800 I -        [conn9] end connection 127.0.0.1:49913 (2 connections now open)
+2017-05-21T16:00:09.837+0800 I -        [conn10] end connection 127.0.0.1:49923 (2 connections now open)
+2017-05-24T17:06:14.847+0800 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2017-05-24T17:06:14.905+0800 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2017-05-24T17:06:14.905+0800 I NETWORK  [serviceShutdown] closing listening socket: 528
+2017-05-24T17:06:14.972+0800 I NETWORK  [serviceShutdown] shutdown: going to flush diaglog...
+2017-05-24T17:06:14.990+0800 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2017-05-24T17:06:14.997+0800 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2017-05-24T17:06:15.374+0800 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2017-05-24T17:06:15.375+0800 I CONTROL  [serviceShutdown] now exiting

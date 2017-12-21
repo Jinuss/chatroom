@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NodeJs-Chatroom</title>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/icon.icon" media="screen" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 col-md-5">
+          <div id="loginBox">
+            <form id="signinForm" class="form-signin" role="form" onsubmit="return false;">
+              <h2 class="form-signin-heading">Sign in</h2>
+              <input id="username" type="text" class="form-control" placeholder="Username" required="" autofocus="">
+              <input id="userpassword" type="password" class="form-control" placeholder="Password" required="">
+              <button id="loginBtn" class="btn btn-lg btn-primary btn-block">Sign in</button>
+            </form>
+            <p id="SignInErr"></p>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+          <div class="text-center"><br><br>
+            <h1>Or</h1>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-5">
+          <div id="signupBox">
+            <form id="signupForm" class="form-signin" role="form" onsubmit="return false;">
+              <h2 class="form-signin-heading">Sign up</h2>
+              <input id="upName" type="text" maxlength="5" class="form-control" placeholder="Username" required="" />
+              <input id="upPassword" type="password" maxlength="6" class="form-control" placeholder="Password" required="" />
+              <button id="signupBtn" class="btn btn-lg btn-primary btn-block">Sign up</button>
+            </form>
+            <p id="SignUpErr"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="hidden">
+      <div id="sideBar">
+        <div id="userInfo">
+          <img class="headImg" />
+          <span id="weather"></span>
+        </div>
+        <hr style="margin:0;">
+        <div id="control">
+          <div>
+            <span id="gloableName"></span>
+            <br>
+            <em></em>
+          </div>
+          <hr>
+          <ul>
+            <li id="set"><i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;Setting</li>
+            <li id="changeUser"><i class="glyphicon glyphicon-transfer"></i>&nbsp;&nbsp;Switch</li>
+            <li id="layout"><i class="glyphicon glyphicon-off"></i>&nbsp;&nbsp;Layout</li>
+          </ul>
+        </div>
+        <ul id="setContent" style="display: none">
+          <li><i class="glyphicon glyphicon-eye-close"></i><em>&nbsp;&nbsp;Update Password</em></li>
+          <li><i class="glyphicon glyphicon-tags"></i><em>&nbsp;&nbsp;Personal Sign</em></li>
+          <li><i class="glyphicon glyphicon-user"></i><em>&nbsp;&nbsp;Head Portrait </em></li>
+        </ul>
+        <div id="setOne" style="display:none;">
+          <input type="password" placeholder="Old Password" maxlength="6" id="oldpass" />
+          <input type="password" placeholder="New Password" maxlength="6" id="newpass" />
+          <p></p>
+        </div>
+        <div id="setTwo" style="display: none;">
+          <input type="text" placeholder="write something will well" maxlength="16" />
+          <p></p>
+        </div>
+        <div id="setThree" style="display:none;">
+          <p>*Double click the picture to select</p>
+          <div id="imgContent">
+            <ul>
+            </ul>
+          </div>
+        </div>
+        <div id="chatChange">
+          <ul id="selectmenu">
+            <li>Square</li>
+            <li>Choose Room</li>
+            <ul id="selectRoom" style="display: none;">
+              <li><img src="/img/firsthead.jpg" alt="" /><span>The Legend of Qin</span></li>
+              <li><img src="/img/secondhead.jpg" alt=""><span>Naruto</span></li>
+            </ul>
+          </ul>
+
+          <div>
+          </div>
+        </div>
+      </div>
+      <div id="chatBox">
+        <div id="headmessages"><strong>Square</strong></div>
+        <div id="content">
+          <ul id="messages"></ul>
+        </div>
+        <div id="chatbottom">
+          <div>
+            <span class="emotion" title="插入表情"><i class="glyphicon glyphicon-picture"></i></span>
+            <span id="clear" title="清空聊天窗口"><i class="glyphicon glyphicon-refresh"></i></span>
+            <span id="chatRecord" title="聊天历史消息"><i class="glyphicon glyphicon-time"></i></span>
+          </div>
+          <form id="chatMsgForm" onsubmit="return false;">
+            <textarea id="msg" rows="5" cols="35" maxlength="161" placeholder="Enter the content here, you can enter 161 characters at most ~">
+            </textarea>
+            <button id="send" class="btn btn-default"><i class="glyphicon glyphicon-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <div id="model">
+      </div>
+      <div id="rightSide">
+        <span id="membersTitle">Members Information</span>
+        <div id="Allmembers">
+          <div>
+            <i></i>
+            <span>All Members</span>
+            <span id="oncount"></span>/<span id="allcount"></span>
+          </div>
+          <ul id="AllOnline"></ul>
+          <ul id="AllOutline"></ul>
+        </div>
+        <div id="Roommembers">
+          <div>
+            <i></i>
+            <span>Room Members</span>
+            <span id="roomCount"></span>
+          </div>
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div id="oldMsg" style="display: none;">
+        <span id="oldMsgHead" title="关闭历史消息窗口"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;MsgHistory</span>
+        <ul></ul>
+        <span id="clearoldMsg"><i title="清空聊天历史消息" class="glyphicon glyphicon-trash"></i></span>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/jquery.qqFace.js"></script>
+</body>
+
+</html>
